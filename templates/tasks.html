@@ -2,8 +2,8 @@
 {% block content %}
 
     <ul class="collapsible">
-        <li>
-            {% for task in tasks %}
+        {% for task in tasks %}
+            <li>
                 <div class="collapsible-header white-text deep-purple lighten-2 text-shadow">
                     <i class="fas fa-caret-down"></i>
                     <strong>{{ task.task_name }}</strong> : {{ task.due_date }}
@@ -16,8 +16,8 @@
                     <strong>{{ task.category_name }}</strong>
                     <p>{{ task.task_description }}</p>
                 </div>
-            {% endfor %}
-        </li>
+            </li>
+        {% endfor %}
     </ul>
 
 {% endblock %}
